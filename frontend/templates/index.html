@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Misiones Diarias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        input, select, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🕹️ Gestión de Misiones Diarias</h1>
+    
+    <!-- Sección: Agregar Misión Manual -->
+    <form id="addMissionForm">
+        <h2>Agregar Misión Manual</h2>
+        <input type="text" id="title" placeholder="Título de la misión" required>
+        <textarea id="description" placeholder="Descripción de la misión" rows="3" required></textarea>
+        <button type="submit">Agregar Misión</button>
+        <div id="addMissionResult" class="result"></div>
+    </form>
+    
+    <!-- Sección: Buscar Misión -->
+    <form id="searchMissionForm">
+        <h2>Buscar Misión</h2>
+        <input type="text" id="searchQuery" placeholder="Ingresa texto para buscar misión" required>
+        <button type="submit">Buscar</button>
+        <div id="searchResult" class="result"></div>
+    </form>
+    
+    <!-- Sección: Generar Misión Automática -->
+    <form id="generateMissionForm">
+        <h2>Generar Misión con LLM</h2>
+        <input type="text" id="generateQuery" placeholder="Escribe un tema o pista para la misión" required>
+        <button type="submit">Generar Misión</button>
+        <div id="generateResult" class="result"></div>
+    </form>
+    
+    <script src="../app.js"></script>
+</body>
+</html>
